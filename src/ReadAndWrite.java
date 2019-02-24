@@ -27,7 +27,6 @@ public class ReadAndWrite {
         return loadedFromFile;
     }
 
-
     public void writeToDoList(List<Task> tasks) {
 
         File f = new File("t.ser");
@@ -46,18 +45,4 @@ public class ReadAndWrite {
         }
     }
 
-
-
-
-    public void displayList(List<Task> task) {
-        System.out.format("%80s%n", "Your Current Tasks are:-");
-        String format = "%-4s%-15s%-90s%-35s%-10s%n";
-        System.out.printf(format, "ID", "Date Created", "Task", "Project", "Status");
-        System.out.printf(format, "━━", "━━━━━━━━━━━━", "━━━━━━━━━", "━━━━━━━━━", "━━━━━━━━");
-        for (int i = 0; i < task.size(); i++) {
-            System.out.printf(format, i,
-                    task.get(i).getDueDate(), task.get(i).getTask(),
-                    task.get(i).getProject(), task.get(i).isDone());
-        }
-    }
 }

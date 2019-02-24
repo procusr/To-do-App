@@ -11,6 +11,7 @@ public class EditTodoList {
     public EditTodoList(){
         this.task = new Task();
         this.readAndWriteToFile = new ReadAndWrite();
+        this.display=new DisplayTodoList();
     }
 
     public void markAsDone(int id,List<Task> tasks){
@@ -56,7 +57,7 @@ public class EditTodoList {
 
     public void displayByDate(List<Task> tasks){
         List<Task> sorted = tasks.stream().sorted(Comparator.comparing(task->task.getDueDate())).collect(Collectors.toList());
-        readAndWriteToFile.displayList((ArrayList<Task>) sorted);
+        display.displayList(sorted);
         }
 
     }

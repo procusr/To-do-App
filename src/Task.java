@@ -17,11 +17,8 @@ public class Task implements Serializable {
         this.task = taskName;
         this.dueDate = dueDate;
         this.project = taskDescription;
-        this.done = done;
         this.todoItems=new ArrayList<>();
         this.date=LocalDate.now();
-
-
     }
 
     public Task() {
@@ -69,8 +66,6 @@ public class Task implements Serializable {
         }
          return "Not Done";
     }
-
-
 
 }
 

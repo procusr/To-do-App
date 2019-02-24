@@ -20,15 +20,11 @@ public class Main {
             System.out.println("------------------------------------------------");
             myApp.editor.displayDoneAndUndone(myApp.rw.readTaskAsAList());
             System.out.println("------------------------------------------------");
-            System.out.println("1.Add to do list");
-            System.out.println("2.View Your Tasks");
-            System.out.println("3.Remove a Task");
-            System.out.println("4.Edit Task");
-            System.out.println("5.Sort by Date");
-            System.out.println("6.Group by project");
-            System.out.println("7.Mark Task as done");
-            System.out.println("8.Save and Quit");
-            System.out.println("__________________________");
+            System.out.println("1.Add to do list \t\t2.View Your Tasks");
+            System.out.println("3.Remove a Task \t\t4.Edit Task");
+            System.out.println("5.Sort by Date\t\t    6.Group by project");
+            System.out.println("7.Mark Task as done\t\t8.Save and Quit");
+            System.out.println("------------------------------------------------");
             n = myApp.input.nextInt();
             myApp.input.nextLine();
 
@@ -49,10 +45,9 @@ public class Main {
                     myApp.editor.displayByDate(myApp.rw.readTaskAsAList());
                     break;
                 case 6:
-                    System.out.println("Group by project");
+                    myApp.display.sortByProject(myApp.rw.readTaskAsAList());
                 case 7:
                     myApp.markAsDone();
-
                 default:
                     System.out.println("Goodbye !!");
             }
@@ -60,7 +55,6 @@ public class Main {
         while (n != 8);
         myApp.rw.writeToDoList(myApp.myTasks);
     }
-
     public void addTodo() {
         Task task = new Task();
         List<Task> myTasks = rw.readTaskAsAList();
@@ -116,13 +110,6 @@ public class Main {
         System.out.println("Select the index of a task to mark it as done");
         editor.markAsDone(input.nextInt(),rw.readTaskAsAList());
     }
-
-
-
-
-
-
-
 
 }
 

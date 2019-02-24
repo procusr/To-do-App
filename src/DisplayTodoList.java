@@ -9,12 +9,11 @@ import java.util.stream.Collectors;
 
 public class DisplayTodoList {
 
-
     public DisplayTodoList(){
-
     }
+
     public void readFileAndDisplayList() {
-        List<Task> loadedFromFile = new ArrayList<Task>();
+        List<Task> loadedFromFile = new ArrayList<>();
         try (FileInputStream fis = new FileInputStream("t.ser")) {
             ObjectInputStream ois = new ObjectInputStream(fis);
             loadedFromFile = (List<Task>) ois.readObject();

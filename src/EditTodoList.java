@@ -13,14 +13,12 @@ public class EditTodoList {
         this.readAndWriteToFile = new ReadAndWrite();
         this.display=new DisplayTodoList();
     }
-
     public void markAsDone(int id,List<Task> tasks){
         tasks = readAndWriteToFile.readTaskAsAList();
         tasks.get(id).setStatus(true);
         readAndWriteToFile.writeToDoList(tasks);
 
     }
-
     public void markAsUnDone(int id,List<Task> tasks){
         tasks = readAndWriteToFile.readTaskAsAList();
         tasks.get(id).setStatus(false);
@@ -41,7 +39,6 @@ public class EditTodoList {
         return tasks;
 
     }
-
     public void displayDoneAndUndone(List<Task> tasks){
         int done_tasks=0,undone_taks=0;
         for(Task task:tasks){
@@ -59,8 +56,7 @@ public class EditTodoList {
         List<Task> sorted = tasks.stream().sorted(Comparator.comparing(task->task.getDueDate())).collect(Collectors.toList());
         display.displayList(sorted);
         }
-
-    }
+}
 
 
 

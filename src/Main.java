@@ -1,4 +1,3 @@
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -6,11 +5,10 @@ import java.util.*;
 public class Main {
 
     private Scanner input;
-    ReadAndWrite rw = new ReadAndWrite();
-    List<Task> myTasks = rw.readTaskAsAList();
-    EditTodoList editor = new EditTodoList();
-    Task task = new Task();
-    DisplayTodoList display = new DisplayTodoList();
+    private ReadAndWrite rw = new ReadAndWrite();
+    private List<Task> myTasks = rw.readTaskAsAList();
+    private EditTodoList editor = new EditTodoList();
+    private DisplayTodoList display = new DisplayTodoList();
 
     public static void main(String[] args) {
         Main myApp = new Main();
@@ -58,12 +56,18 @@ public class Main {
     public void addTodo() {
         Task task = new Task();
         List<Task> myTasks = rw.readTaskAsAList();
-        System.out.println("Enter Task: ");
+        System.out.println("Enter the Task: ");
         task.setTaskName(input.nextLine());
         System.out.println("Enter date (dd-mm-yyyy)");
-        task.setDueDate(parseDate(input.nextLine()));
-        System.out.println("Describe the Task: ");
-        task.setTaskDescription(input.nextLine());
+        LocalDate date = parseDate(input.nextLine());
+        while(LocalDate.now().compareTo(date)>0){      //Validate if the given date is not before today
+            System.out.println("Your given due date is already passed or You entered " +
+                    "Invalid character Enter your input again");
+             date = parseDate(input.nextLine());
+        }
+        task.setDueDate(date);
+        //System.out.println("Describe the Task: ");
+        //task.setTaskDescription(input.nextLine());
         System.out.println("Project Name: ");
         task.setProject(input.nextLine());
         myTasks.add(task);
@@ -102,7 +106,6 @@ public class Main {
         String editedText = input.nextLine();
         List<Task> modified = editor.editTask(id,rw.readTaskAsAList(),editedText);
         rw.writeToDoList(modified);
-
     }
 
     public void markAsDone(){

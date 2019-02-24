@@ -4,14 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Task implements Serializable {
-
     private String task;
     private boolean done;
     private LocalDate dueDate;
     private String project;
     private List<Task> todoItems;
     private LocalDate date;
-
 
     public Task(LocalDate dueDate, String taskName, String project, String taskDescription) {
         this.task = taskName;
@@ -20,7 +18,6 @@ public class Task implements Serializable {
         this.todoItems=new ArrayList<>();
         this.date=LocalDate.now();
     }
-
     public Task() {
         this.done = false;
     }
@@ -44,7 +41,6 @@ public class Task implements Serializable {
     public void setTaskDescription(String project){
         this.project=project;
     }
-
 
     public String getProject(){
        return this.project ;

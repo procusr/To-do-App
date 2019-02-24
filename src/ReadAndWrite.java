@@ -1,20 +1,11 @@
 import java.io.*;
-import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 
 public class ReadAndWrite {
-    private List<Task> loadedFromFile;
-
-    public static void main(String[] args) {
-        Main m = new Main();
-
-    }
 
     public List<Task> readTaskAsAList() {
-        List<Task> loadedFromFile = new ArrayList<Task>();
+        List<Task> loadedFromFile = new ArrayList<>();
         try (FileInputStream fis = new FileInputStream("t.ser")) {
             ObjectInputStream ois = new ObjectInputStream(fis);
             loadedFromFile = (List<Task>) ois.readObject();

@@ -30,9 +30,9 @@ public class ReadAndWrite {
             System.out.println("\t  To Do List Saved ✔✔✔");
 
         } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
+            System.out.println("File Not found ");;
         } catch (IOException ex) {
-            ex.printStackTrace();
+            System.out.println("Input/output error");
         }
     }
 

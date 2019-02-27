@@ -1,8 +1,3 @@
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.stream.Collectors;
-
 public class EditTodoList {
     private Task task;
     private ReadAndWrite readAndWriteToFile;
@@ -15,8 +10,10 @@ public class EditTodoList {
     }
     public void markAsDone(int id,List<Task> tasks){
         tasks = readAndWriteToFile.readTaskAsAList();
-        tasks.get(id).setStatus(true);
-        readAndWriteToFile.writeToDoList(tasks);
+        while(!(id<tasks.size())) {
+            tasks.get(id).setStatus(true);
+            readAndWriteToFile.writeToDoList(tasks);
+        }
 
     }
     public void markAsUnDone(int id,List<Task> tasks){
@@ -25,12 +22,10 @@ public class EditTodoList {
 
     }
 
-    public List<Task> removeTask(int id,List<Task> tasks){
-        List<Task> edited = new ArrayList<>();                                    //to store edited list
+    public List<Task> removeTask(int id,List<Task> tasks){//to store edited list
         tasks = readAndWriteToFile.readTaskAsAList();
         tasks.remove(id);
-        edited = tasks;
-        return edited;
+        return tasks;
     }
 
     public List<Task> editTask(int id,List<Task> tasks,String editedTask){
@@ -39,18 +34,7 @@ public class EditTodoList {
         return tasks;
 
     }
-    public void displayDoneAndUndone(List<Task> tasks){
-        int done_tasks=0,undone_taks=0;
-        for(Task task:tasks){
-            if(task.getStatus()==true){
-                done_tasks++;
-            }
-            else{
-                undone_taks++;
-            }
-        }
-        System.out.println("You have " + done_tasks + "  tasks Completed  and  " + undone_taks + "  Tasks to do");
-    }
+
 
     public void displayByDate(List<Task> tasks){
         List<Task> sorted = tasks.stream().sorted(Comparator.comparing(task->task.getDueDate())).collect(Collectors.toList());

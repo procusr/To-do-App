@@ -38,9 +38,6 @@ public class Task implements Serializable {
         this.done = done;
     }
 
-    public void setTaskDescription(String project){
-        this.project=project;
-    }
 
     public String getProject(){
        return this.project ;

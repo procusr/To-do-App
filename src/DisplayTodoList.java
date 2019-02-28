@@ -1,3 +1,16 @@
+/**
+ * Displays the main menu, A list of tasks in the memory and shows sorted by date and project
+ *
+ * */
+
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class DisplayTodoList {
@@ -42,9 +55,9 @@ public class DisplayTodoList {
         } catch (FileNotFoundException ex) {
             System.out.println("File noy found");
         } catch (IOException ex) {
-            ex.printStackTrace();
+            System.out.println("Input/output error");
         } catch (ClassNotFoundException ex) {
-            ex.printStackTrace();
+            System.out.println("Not found");
         }
         displayList(loadedFromFile);
     }
@@ -70,7 +83,5 @@ public class DisplayTodoList {
         List<Task> sorted = tasks.stream().sorted(Comparator.comparing(task->content)).collect(Collectors.toList());
         displayList(sorted);
     }
-
-
 }
 

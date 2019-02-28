@@ -38,7 +38,6 @@ public class Task implements Serializable {
         this.done = done;
     }
 
-
     public String getProject(){
        return this.project ;
     }
@@ -59,6 +58,5 @@ public class Task implements Serializable {
         }
          return "Not Done";
     }
-
 }
 

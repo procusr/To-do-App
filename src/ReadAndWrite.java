@@ -1,3 +1,7 @@
+/**
+ * A class to read files and write using object stream
+ *
+ * */
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +12,7 @@ public class ReadAndWrite {
         List<Task> loadedFromFile = new ArrayList<>();
         try (FileInputStream fis = new FileInputStream("t.ser")) {
             ObjectInputStream ois = new ObjectInputStream(fis);
-            loadedFromFile = (List<Task>) ois.readObject();
+            loadedFromFile = (List<Task>)  ois.readObject();
             ois.close();
         } catch (FileNotFoundException ex) {
         } catch (IOException ex) {

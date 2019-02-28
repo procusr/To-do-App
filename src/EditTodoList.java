@@ -1,3 +1,12 @@
+/**
+ * This is class is mainly responsible for editing, removing and changing the status of
+ * the tasks
+ *
+ * */
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class EditTodoList {
     private Task task;
     private ReadAndWrite readAndWriteToFile;
@@ -8,18 +17,17 @@ public class EditTodoList {
         this.readAndWriteToFile = new ReadAndWrite();
         this.display=new DisplayTodoList();
     }
+
     public void markAsDone(int id,List<Task> tasks){
         tasks = readAndWriteToFile.readTaskAsAList();
-        while(!(id<tasks.size())) {
-            tasks.get(id).setStatus(true);
-            readAndWriteToFile.writeToDoList(tasks);
-        }
+        tasks.get(id).setStatus(true);
+        readAndWriteToFile.writeToDoList(tasks);
 
     }
+
     public void markAsUnDone(int id,List<Task> tasks){
         tasks = readAndWriteToFile.readTaskAsAList();
         tasks.get(id).setStatus(false);
-
     }
 
     public List<Task> removeTask(int id,List<Task> tasks){//to store edited list
@@ -32,7 +40,6 @@ public class EditTodoList {
         tasks = readAndWriteToFile.readTaskAsAList();
         tasks.get(id).setTaskName(editedTask);
         return tasks;
-
     }
 
 

@@ -27,8 +27,8 @@ public class DisplayTodoList {
         System.out.println("------------------------------------------------");
         System.out.println("1.Add to do list \t\t2.View Your Tasks");
         System.out.println("3.Remove a Task \t\t4.Edit Task");
-        System.out.println("5.Sort by Date\t\t    6.Group by project");
-        System.out.println("7.Mark Task as done\t\t8.Save and Quit");
+        System.out.println("5.Sort by Date\t\t    6.Group Tasks by project");
+        System.out.println("7.Mark Task as done\t\t8.Quit");
         System.out.println("------------------------------------------------");
     }
 
@@ -53,7 +53,7 @@ public class DisplayTodoList {
             loadedFromFile = (List<Task>) ois.readObject();
             ois.close();
         } catch (FileNotFoundException ex) {
-            System.out.println("File noy found");
+            System.out.println("File not found");
         } catch (IOException ex) {
             System.out.println("Input/output error");
         } catch (ClassNotFoundException ex) {
@@ -79,8 +79,8 @@ public class DisplayTodoList {
         displayList(sorted);
     }
 
-    public void sortBytype(List<Task> tasks,String content){
-        List<Task> sorted = tasks.stream().sorted(Comparator.comparing(task->content)).collect(Collectors.toList());
+    public void displayByDate(List<Task> tasks){
+        List<Task> sorted = tasks.stream().sorted(Comparator.comparing(task->task.getDueDate())).collect(Collectors.toList());
         displayList(sorted);
     }
 }

@@ -60,7 +60,7 @@ public class Main {
                         myApp.editTask();
                         break;
                     case 5:
-                        myApp.editor.displayByDate(myApp.rw.readTaskAsAList());
+                        myApp.display.displayByDate(myApp.rw.readTaskAsAList());
                         break;
                     case 6:
                         myApp.display.sortByProject(myApp.rw.readTaskAsAList());

@@ -2,8 +2,6 @@
  * Displays the main menu, A list of tasks in the memory and shows sorted by date and project
  *
  * */
-
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -28,7 +26,7 @@ public class DisplayTodoList {
         System.out.println("1.Add to do list \t\t2.View Your Tasks");
         System.out.println("3.Remove a Task \t\t4.Edit Task");
         System.out.println("5.Sort by Date\t\t    6.Group by project");
-        System.out.println("7.Mark Task as done\t\t8.Save and Quit");
+        System.out.println("7.Mark Task as done\t\t8.Quit");
         System.out.println("------------------------------------------------");
     }
 

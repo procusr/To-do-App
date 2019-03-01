@@ -41,13 +41,11 @@ public class EditTodoList {
         tasks.get(id).setTaskName(editedTask);
         return tasks;
     }
-
-
-    public void displayByDate(List<Task> tasks){
-        List<Task> sorted = tasks.stream().sorted(Comparator.comparing(task->task.getDueDate())).collect(Collectors.toList());
-        display.displayList(sorted);
-        }
+    
 }
+
+
+
 
 
 

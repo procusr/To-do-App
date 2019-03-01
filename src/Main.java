@@ -28,8 +28,7 @@ public class Main {
         Main myApp = new Main();
         myApp.input = new Scanner(System.in);
 
-
-      // A menu for our text-based user interface
+ // A menu for our text-based user interface
        String n ;
        int x;
             do {
@@ -60,7 +59,7 @@ public class Main {
                         myApp.editTask();
                         break;
                     case 5:
-                        myApp.editor.displayByDate(myApp.rw.readTaskAsAList());
+                        myApp.display.displayByDate(myApp.rw.readTaskAsAList());
                         break;
                     case 6:
                         myApp.display.sortByProject(myApp.rw.readTaskAsAList());
@@ -198,6 +197,11 @@ public class Main {
         }
     }
 }
+
+
+
+
+
 
 
 

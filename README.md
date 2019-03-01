@@ -20,4 +20,4 @@ Text based interface is provided for the user and almost all options can be ente
 
 
 ### Class diagram
-![class diagram](https://github.com/procusr/To-do-App/blob/mychanges/Class-Diagram.png =250X250)
+![class diagram](https://github.com/procusr/To-do-App/blob/mychanges/Class-Diagram.png =250x250)

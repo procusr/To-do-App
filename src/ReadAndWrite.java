@@ -39,5 +39,4 @@ public class ReadAndWrite {
             System.out.println("Input/output error");
         }
     }
-
 }

@@ -21,3 +21,4 @@ Text based interface is provided for the user and almost all options can be ente
 
 ### Class diagram
 ![class diagram](https://github.com/procusr/To-do-App/Class-Diagram.png =250x250)
+![alt text](https://raw.githubusercontent.com/procusr/To-do-App/master/Class-Diagram.png)

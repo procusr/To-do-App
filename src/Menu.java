@@ -67,7 +67,7 @@ public class Menu {
                         display.ShowNotDone(rw.readTaskAsAList());
                         break;
                     default:
-                        System.out.println("Valid options not entered");
+                        System.out.println("Valid option not entered");
                 }
             }
             while (int_input != 9);
@@ -89,13 +89,13 @@ public class Menu {
         }
         System.out.print("Enter date in the format(dd-mm-yyyy): ");
         LocalDate date = parseDate(input);
-        while(LocalDate.now().compareTo(date)>0 && input.nextLine().isEmpty()){      //Validate if the given date is not before today
-            System.out.println("Your given due date is already passed or You entered " +
-                    "Invalid character\nEnter your input again");
+        while(LocalDate.now().compareTo(date)>0 ){      //Validate if the given date is not before today
+            System.out.print("Your given due date is already passed or You entered " +
+                    "Invalid character\nEnter your input again:");
              date = parseDate(input);
         }
         task.setDueDate(date);
-        System.out.println("Project Name: ");
+        System.out.print("Project Name: ");
         while(input.hasNextLine()){      //makes sure the user enters valid input
             String projectName = input.nextLine();
             if(!projectName.isEmpty()) {
@@ -121,7 +121,7 @@ public class Menu {
                     rw.writeToDoList(edited);
                     break;
                 }
-                System.out.print("Enter Again Please");
+                System.out.print("Enter Again Please: ");
             }
             catch(IndexOutOfBoundsException|InputMismatchException|NumberFormatException ex){
                 System.out.println("Enter numbers only: ");
@@ -135,16 +135,15 @@ public class Menu {
 
 
     //Takes Scanner object and parses the input given by the user
-
     public LocalDate parseDate(Scanner in) {
-       boolean condition=true;
         LocalDate parsedDate = null;
-        while(condition) {
+        while(true) {
             try {
                 parsedDate = LocalDate.parse(in.nextLine(), DateTimeFormatter.ofPattern("dd-MM-yyyy"));
-                condition=false;
+               break;
             } catch (Exception e) {
-                System.out.println("You did not provide the proper format/input");
+                System.out.print("You did not provide the proper format/input \n" +
+                        "Enter again (dd-MM-yyyy): ");
             }
         }
         return parsedDate;
@@ -153,7 +152,7 @@ public class Menu {
     //edits the Specified task and Automatically saves it
     public void editTask(){
         display.readFileAndDisplayList();
-        System.out.println("Enter Task of the Id Your would like to edit  ");
+        System.out.println("Enter Task of the Id Your would like to edit: ");
         int x;
         String y;
         while(true) {
@@ -167,7 +166,7 @@ public class Menu {
                     rw.writeToDoList(modified);
                     break;
                 }
-                System.out.println("Enter a valid option please");
+                System.out.println("Enter a valid option please ");
             }
             catch(IndexOutOfBoundsException|InputMismatchException|NumberFormatException ex){
                 System.out.println("That task doesn't exist enter again: ");

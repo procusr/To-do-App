@@ -13,6 +13,7 @@ To-do-App is a java application for storing a todo list of tasks.
   
 ### Installation
     Java VM is required to run the program.
+    The program should be loaded in Intellij
     
 
 ### Manual

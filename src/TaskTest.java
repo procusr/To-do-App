@@ -10,7 +10,6 @@ public class TaskTest {
     private LocalDate dueDate;
     private String taskName;
     private String project;
-
     private Task taskUnderTest;
 
     @Before

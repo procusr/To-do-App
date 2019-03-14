@@ -3,7 +3,6 @@
  *
  * */
 
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -44,7 +43,6 @@ public class DisplayTodoList {
         }
         System.out.println("You have " + done_tasks + "  task(s) Completed  and  " + undone_taks + "  Task(s) to do");
     }
-
 
     public void readFileAndDisplayList() {
         List<Task> loadedFromFile = new ArrayList<>();

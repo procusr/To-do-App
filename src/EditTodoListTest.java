@@ -19,7 +19,6 @@ public class EditTodoListTest {
         task1 = new Task(LocalDate.now(),"task","prj12");
     }
 
-
     @Test
     public void testRemoveTask() {
         //setup
@@ -36,7 +35,6 @@ public class EditTodoListTest {
         assertEquals(expectedResult.get(0).getTask(), result.get(0).getTask());
     }
 
-
     @Test
     public void testEditTask() {
         // Setup
@@ -50,6 +48,4 @@ public class EditTodoListTest {
         // Verify
         assertEquals(expectedResult, result.get(0).getTask());
     }
-
-
 }

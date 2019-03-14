@@ -37,7 +37,6 @@ public class Task implements Serializable {
     public void setStatus(boolean done) {
         this.done = done;
     }
-
     public String getProject(){
        return this.project ;
     }
@@ -52,6 +51,7 @@ public class Task implements Serializable {
         return this.dueDate;
     }
 
+    // represents the done and undone tasks in human readable form
     public  String isDone() {
         if(this.done == true) {
             return "Done";

@@ -1,9 +1,6 @@
 /**
- *
  * This is the main class which is responsible for calling other classes and run
  * methods to display main menu,display and write/read from memory and manipulate tasks.
- *
- *
  * */
 
 import java.time.LocalDate;

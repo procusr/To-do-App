@@ -2,7 +2,6 @@
  * A class to read files and write using object stream
  * The purpose of this class is just to load the contents of file as an arraylist
  * and also to write it back as a list
- *
  * */
 
 import java.io.*;
@@ -22,13 +21,11 @@ public class ReadAndWrite {
         } catch (IOException ex) {
         } catch (ClassNotFoundException ex) {
         }
-
         return loadedFromFile;
     }
 
-    //writes the list back to the disk
+    //writes the list back to the memory
     public void writeToDoList(List<Task> tasks) {
-
         File f = new File("t.ser");
         try {
             FileOutputStream fos = new FileOutputStream(f);

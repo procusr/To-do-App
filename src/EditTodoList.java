@@ -1,7 +1,6 @@
 /**
  * This is class is mainly responsible for editing, removing and changing the status of
  * the tasks
- *
  * */
 
 import java.util.List;
@@ -21,7 +20,6 @@ public class EditTodoList {
         tasks = readAndWriteToFile.readTaskAsAList();
         tasks.get(id).setStatus(true);
         readAndWriteToFile.writeToDoList(tasks);
-
     }
 
     public List<Task> removeTask(int id,List<Task> tasks){    //to store edited list

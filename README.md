@@ -9,6 +9,7 @@ To-do-App is a java application for storing a todo list of tasks.
   - Tasks can be grouped by Due date or project/sorting
   - Every menu is selected using a number id provided 
   - Text based inteface is provided
+  - Show incomplete tasks
   
 ### Installation
     Java VM is required to run the program.
@@ -20,6 +21,6 @@ Text based interface is provided for the user and almost all options can be ente
 
 
 ### Class diagram
-Svg file is included for the class diagram in the root folder
 ![class diagram](Class_Diagram.png)
 
+(alternative SVG file included for this diagram in the root project folder)

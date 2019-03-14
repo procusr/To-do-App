@@ -20,6 +20,6 @@ Text based interface is provided for the user and almost all options can be ente
 
 
 ### Class diagram
-
+Svg file is included for the class diagram in the root folder
 ![class diagram](Class_Diagram.png)
 

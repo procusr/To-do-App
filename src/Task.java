@@ -11,12 +11,12 @@ public class Task implements Serializable {
     private List<Task> todoItems;
     private LocalDate date;
 
-    public Task(LocalDate dueDate, String taskName, String project, String taskDescription) {
+    public Task(LocalDate dueDate, String taskName, String project) {
         this.task = taskName;
         this.dueDate = dueDate;
-        this.project = taskDescription;
         this.todoItems=new ArrayList<>();
         this.date=LocalDate.now();
+        this.done=false;
     }
     public Task() {
         this.done = false;

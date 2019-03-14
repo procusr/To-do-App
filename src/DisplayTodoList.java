@@ -15,7 +15,6 @@ import java.util.stream.Collectors;
 
 public class DisplayTodoList {
     ReadAndWrite rw;
-    private EditTodoList editor ;
 
     public DisplayTodoList(){
         rw = new ReadAndWrite();
@@ -25,10 +24,11 @@ public class DisplayTodoList {
         System.out.println("------------------------------------------------");
         displayDoneAndUndone(rw.readTaskAsAList());
         System.out.println("------------------------------------------------");
-        System.out.println("1.Add to do list \t\t2.View Your Tasks");
-        System.out.println("3.Remove a Task \t\t4.Edit Task");
-        System.out.println("5.Sort by Date\t\t    6.Group Tasks by project");
-        System.out.println("7.Mark Task as done\t\t8.Quit");
+        System.out.println("(1).Add to do list \t\t(2).View Your Tasks");
+        System.out.println("(3).Remove a Task \t\t(4).Edit Task");
+        System.out.println("(5).Sort by Date\t    (6).Sort Tasks by project");
+        System.out.println("(7).Mark Task as done\t(8).Show only Undone tasks");
+        System.out.println("(9).Quit");
         System.out.println("------------------------------------------------");
     }
 
@@ -42,7 +42,7 @@ public class DisplayTodoList {
                 undone_taks++;
             }
         }
-        System.out.println("You have " + done_tasks + "  tasks Completed  and  " + undone_taks + "  Tasks to do");
+        System.out.println("You have " + done_tasks + "  task(s) Completed  and  " + undone_taks + "  Task(s) to do");
     }
 
 
@@ -65,7 +65,7 @@ public class DisplayTodoList {
     public void displayList(List<Task> task) {
         System.out.format("%80s%n", "Your Current Tasks are:-");
         String format = "%-4s%-15s%-90s%-35s%-10s%n";
-        System.out.printf(format, "ID", "Date Created", "Task", "Project", "Status");
+        System.out.printf(format, "ID", "Due Date", "Task", "Project", "Status");
         System.out.printf(format, "━━", "━━━━━━━━━━━━", "━━━━━━━━━", "━━━━━━━━━", "━━━━━━━━");
         for (int i = 0; i < task.size(); i++) {
             System.out.printf(format, i,
@@ -82,6 +82,11 @@ public class DisplayTodoList {
     public void displayByDate(List<Task> tasks){
         List<Task> sorted = tasks.stream().sorted(Comparator.comparing(task->task.getDueDate())).collect(Collectors.toList());
         displayList(sorted);
+    }
+
+    public void ShowNotDone(List<Task> tasks){
+        List<Task> notDone = tasks.stream().filter(task -> task.getStatus()==false).collect(Collectors.toList());
+        displayList(notDone);
     }
 }
 

@@ -1,7 +1,8 @@
 /**
  *
  * This is the main class which is responsible for calling other classes and run
- * methods to display main menu,display and write/read from memory and manipulate tasks
+ * methods to display main menu,display and write/read from memory and manipulate tasks.
+ *
  *
  * */
 
@@ -9,14 +10,15 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
-public class Main {
+public class Menu {
     private Scanner input;
     private ReadAndWrite rw ;
     private List<Task> myTasks;
     private EditTodoList editor ;
     private DisplayTodoList display;
 
-    public Main(){
+    //constructor
+    public Menu(){
          input = new Scanner(System.in);
          rw = new ReadAndWrite();
          myTasks = rw.readTaskAsAList();
@@ -24,62 +26,64 @@ public class Main {
          display = new DisplayTodoList();
     }
 
-    public static void main(String[] args) {
-        Main myApp = new Main();
-        myApp.input = new Scanner(System.in);
-
-
+    public void menuDisplay(){
+        
       // A menu for our text-based user interface
-       String n ;
-       int x;
+       String string_input;
+       int int_input;
             do {
-                while(true) {
-                    myApp.display.displayMainMenu();
+                while(true) {                    //user is asked to enter the correct number and format if not provided
+                    display.displayMainMenu();
                     try {
-                         n = myApp.input.nextLine();
-                         x =Integer.parseInt(n);
-                    if(!(x<=0||x>=9)){
+                         string_input = input.nextLine();
+                         int_input =Integer.parseInt(string_input);
+                    if(!(int_input<0||int_input>=9)){
                             break;
                         }
                     } catch (NumberFormatException ex) {
                         System.out.println("Enter a valid option again ");
                     }
                 }
-
-                switch (x) {
+                switch (int_input) {
                     case 1:
-                        myApp.addTodo();
+                        addTodo();
                         break;
                     case 2:
-                        myApp.displayYourTodoList();
+                        displayYourTodoList();
                         break;
                     case 3:
-                        myApp.removeATask();
+                        removeATask();
                         break;
                     case 4:
-                        myApp.editTask();
+                       editTask();
                         break;
                     case 5:
-                        myApp.display.displayByDate(myApp.rw.readTaskAsAList());
+                        display.displayByDate(rw.readTaskAsAList());
                         break;
                     case 6:
-                        myApp.display.sortByProject(myApp.rw.readTaskAsAList());
+                        display.sortByProject(rw.readTaskAsAList());
+                        break;
                     case 7:
-                        myApp.markAsDone();
+                        markAsDone();
+                        break;
+                    case 8:
+                        System.out.println("Here are the task(s) you're going to do ...");
+                        display.ShowNotDone(rw.readTaskAsAList());
+                        break;
                     default:
-                        System.out.println("Goodbye !!");
+                        System.out.println("Valid options not entered");
                 }
-
             }
-            while (x != 8);
-            myApp.rw.writeToDoList(myApp.myTasks);
+            while (int_input != 9);
+            rw.writeToDoList(myTasks);  //write everything on exit to a file
         }
 
+        //add a task with appropriate date
     public void addTodo() {
         Task task = new Task();
         List<Task> myTasks = rw.readTaskAsAList();
         System.out.print("Enter the Task: ");
-        while(input.hasNextLine()){
+        while(input.hasNextLine()){             //keep looping until user enters valid input
             String taskName = input.nextLine();
             if(!taskName.isEmpty()) {
                 task.setTaskName(taskName);
@@ -96,7 +100,7 @@ public class Main {
         }
         task.setDueDate(date);
         System.out.println("Project Name: ");
-        while(input.hasNextLine()){
+        while(input.hasNextLine()){      //makes sure the user enters valid input
             String projectName = input.nextLine();
             if(!projectName.isEmpty()) {
                 task.setProject(projectName);
@@ -138,16 +142,16 @@ public class Main {
 
     public static LocalDate parseDate(Scanner in) {
        boolean condition=true;
-        LocalDate s = null;
+        LocalDate parsedDate = null;
         while(condition) {
             try {
-                s = LocalDate.parse(in.nextLine(), DateTimeFormatter.ofPattern("dd-MM-yyyy", Locale.ENGLISH));
+                parsedDate = LocalDate.parse(in.nextLine(), DateTimeFormatter.ofPattern("dd-MM-yyyy"));
                 condition=false;
             } catch (Exception e) {
                 System.out.println("You did not provide the proper format/input");
             }
         }
-        return s;
+        return parsedDate;
     }
 
     //edits the Specified task and Automatically saves it

@@ -3,9 +3,8 @@
  * the tasks
  *
  * */
-import java.util.Comparator;
+
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class EditTodoList {
     private Task task;
@@ -25,12 +24,7 @@ public class EditTodoList {
 
     }
 
-    public void markAsUnDone(int id,List<Task> tasks){
-        tasks = readAndWriteToFile.readTaskAsAList();
-        tasks.get(id).setStatus(false);
-    }
-
-    public List<Task> removeTask(int id,List<Task> tasks){//to store edited list
+    public List<Task> removeTask(int id,List<Task> tasks){    //to store edited list
         tasks = readAndWriteToFile.readTaskAsAList();
         tasks.remove(id);
         return tasks;

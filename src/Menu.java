@@ -32,7 +32,7 @@ public class Menu {
        String string_input;
        int int_input;
             do {
-                while(true) {                    //user is asked to enter the correct number and format if not provided
+                while(true) {                   //user is asked to enter the correct number and format if not provided
                     display.displayMainMenu();
                     try {
                          string_input = input.nextLine();

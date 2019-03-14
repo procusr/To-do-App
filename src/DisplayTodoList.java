@@ -57,10 +57,10 @@ public class DisplayTodoList {
         } catch (ClassNotFoundException ex) {
             System.out.println("Not found");
         }
-        displayList(loadedFromFile);
+        displayTasks(loadedFromFile);
     }
 
-    public void displayList(List<Task> task) {
+    public void displayTasks(List<Task> task) {
         System.out.format("%80s%n", "Your Current Tasks are:-");
         String format = "%-4s%-15s%-90s%-35s%-10s%n";
         System.out.printf(format, "ID", "Due Date", "Task", "Project", "Status");
@@ -74,17 +74,17 @@ public class DisplayTodoList {
 
     public void sortByProject(List<Task> tasks){
         List<Task> sorted = tasks.stream().sorted(Comparator.comparing(task->task.getProject())).collect(Collectors.toList());
-        displayList(sorted);
+        displayTasks(sorted);
     }
 
     public void displayByDate(List<Task> tasks){
         List<Task> sorted = tasks.stream().sorted(Comparator.comparing(task->task.getDueDate())).collect(Collectors.toList());
-        displayList(sorted);
+        displayTasks(sorted);
     }
 
     public void ShowNotDone(List<Task> tasks){
         List<Task> notDone = tasks.stream().filter(task -> task.getStatus()==false).collect(Collectors.toList());
-        displayList(notDone);
+        displayTasks(notDone);
     }
 }
 

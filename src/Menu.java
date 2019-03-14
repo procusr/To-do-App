@@ -23,11 +23,10 @@ public class Menu {
          display = new DisplayTodoList();
     }
 
+    // A menu for our text-based user interface
     public void menuDisplay(){
-        
-      // A menu for our text-based user interface
        String string_input;
-       int int_input;
+       int int_input=0;
             do {
                 while(true) {                   //user is asked to enter the correct number and format if not provided
                     display.displayMainMenu();

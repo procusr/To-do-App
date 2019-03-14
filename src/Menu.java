@@ -136,7 +136,7 @@ public class Menu {
 
     //Takes Scanner object and parses the input given by the user
 
-    public static LocalDate parseDate(Scanner in) {
+    public LocalDate parseDate(Scanner in) {
        boolean condition=true;
         LocalDate parsedDate = null;
         while(condition) {

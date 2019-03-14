@@ -17,21 +17,19 @@ public class EditTodoListTest {
         editTodoListUnderTest = new EditTodoList();
         task = new Task(LocalDate.now(),"task","prj12");
         task1 = new Task(LocalDate.now(),"task","prj12");
-
     }
-
 
 
     @Test
     public void testRemoveTask() {
-        // Setup
+        //setup
         final int id = 0;
         final List<Task> tasks = new ArrayList<>();
         tasks.add(task);
         tasks.add(task1);
         final List<Task> expectedResult = Arrays.asList(task1);
 
-        // Run the test
+       // test
         final List<Task> result = editTodoListUnderTest.removeTask(id, tasks);
 
         // Verify
@@ -46,10 +44,12 @@ public class EditTodoListTest {
         final List<Task> tasks = Arrays.asList(task,task1);
         final String expectedResult = "editedTask";
 
-        // Run the test
+        // the test
         final List<Task> result = editTodoListUnderTest.editTask(id, tasks,"editedTask");
 
         // Verify
         assertEquals(expectedResult, result.get(0).getTask());
     }
+
+
 }

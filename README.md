@@ -21,5 +21,5 @@ Text based interface is provided for the user and almost all options can be ente
 
 ### Class diagram
 
-![class diagram](Class-Diagram .svg)
+![class diagram](Class-Diagram.svg)
 

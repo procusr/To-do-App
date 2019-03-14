@@ -26,14 +26,14 @@ public class Menu {
     // A menu for our text-based user interface
     public void menuDisplay(){
        String string_input;
-       int int_input=0;
-            do {
+       int int_input;
+          do {
                 while(true) {                   //user is asked to enter the correct number and format if not provided
                     display.displayMainMenu();
                     try {
                          string_input = input.nextLine();
                          int_input =Integer.parseInt(string_input);
-                    if(!(int_input<0||int_input>=9)){
+                    if(int_input>=1&&int_input<=9){
                             break;
                         }
                     } catch (NumberFormatException ex) {
@@ -67,10 +67,10 @@ public class Menu {
                         display.ShowNotDone(rw.readTaskAsAList());
                         break;
                     default:
-                        System.out.println("Valid option not entered");
+                        System.out.println("-- Good Bye --");
                 }
             }
-            while (int_input != 9);
+            while (!(int_input==9));
             rw.writeToDoList(myTasks);  //write everything on exit to a file
         }
 

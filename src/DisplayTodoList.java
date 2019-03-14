@@ -78,7 +78,7 @@ public class DisplayTodoList {
 
     //Sorts the projects alphabetically
     public void sortByProject(List<Task> tasks){
-        List<Task> sorted = tasks.stream().sorted(Comparator.comparing(task->task.getProject())).collect(Collectors.toList());
+        List<Task> sorted = tasks.stream().sorted(Comparator.comparing(task->task.getProject(),String.CASE_INSENSITIVE_ORDER)).collect(Collectors.toList());
         displayTasks(sorted);
     }
     //Sort the days in ascending order

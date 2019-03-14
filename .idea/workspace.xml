@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14a5c164-6838-4ac8-8c5c-f3e2fbb154d0" name="Default Changelist" comment="">
+    <list default="true" id="14a5c164-6838-4ac8-8c5c-f3e2fbb154d0" name="Default Changelist" comment=" fixed errors and improved the comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/To-do-App/production/To-do-App/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/To-do-App/production/To-do-App/Menu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DisplayTodoList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DisplayTodoList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EditTodoList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditTodoList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EditTodoListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditTodoListTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/t.ser" beforeDir="false" afterPath="$PROJECT_DIR$/t.ser" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DisplayTodoList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-831">
-              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+            <state relative-caret-position="423">
+              <caret line="85" column="126" lean-forward="true" selection-start-line="85" selection-start-column="126" selection-end-line="85" selection-end-column="126" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -53,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ReadAndWrite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-193">
+            <state relative-caret-position="13">
               <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -63,10 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EditTodoListTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-112">
+            <state relative-caret-position="88">
               <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -78,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1076">
-              <caret line="110" column="70" lean-forward="true" selection-start-line="110" selection-start-column="70" selection-end-line="110" selection-end-column="70" />
+            <state relative-caret-position="14">
+              <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -135,11 +135,11 @@
         <option value="$PROJECT_DIR$/src/TaskTest.java" />
         <option value="$PROJECT_DIR$/src/Task.java" />
         <option value="$PROJECT_DIR$/src/src.plantuml" />
-        <option value="$PROJECT_DIR$/src/Menu.java" />
-        <option value="$PROJECT_DIR$/src/DisplayTodoList.java" />
         <option value="$PROJECT_DIR$/src/EditTodoList.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/EditTodoListTest.java" />
+        <option value="$PROJECT_DIR$/src/Menu.java" />
+        <option value="$PROJECT_DIR$/src/DisplayTodoList.java" />
       </list>
     </option>
   </component>
@@ -203,7 +203,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552587873584" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552590712508" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -239,13 +239,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Menu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Menu" />
-      <module name="To-do-App" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="EditTodoListTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="To-do-App" />
       <option name="PACKAGE_NAME" value="" />
@@ -255,19 +248,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EditTodoListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EditTodoListTest.testEditTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="To-do-App" />
-      <option name="PACKAGE_NAME" value="Test" />
-      <option name="MAIN_CLASS_NAME" value="Test.EditTodoListTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="EditTodoListTest" />
+      <option name="METHOD_NAME" value="testEditTask" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EditTodoListTest.testRemoveTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EditTodoListTest.testRemoveTask (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="To-do-App" />
-      <option name="PACKAGE_NAME" value="Test" />
-      <option name="MAIN_CLASS_NAME" value="Test.EditTodoListTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="EditTodoListTest" />
       <option name="METHOD_NAME" value="testRemoveTask" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -292,21 +286,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Menu" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Java Scratch.Menu" />
-      <item itemvalue="JUnit.EditTodoListTest.testRemoveTask" />
-      <item itemvalue="JUnit.EditTodoListTest" />
       <item itemvalue="JUnit.TaskTest" />
       <item itemvalue="JUnit.EditTodoListTest (1)" />
+      <item itemvalue="JUnit.EditTodoListTest.testRemoveTask (1)" />
+      <item itemvalue="JUnit.EditTodoListTest.testEditTask" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.EditTodoListTest.testEditTask" />
+        <item itemvalue="JUnit.EditTodoListTest.testRemoveTask (1)" />
         <item itemvalue="JUnit.EditTodoListTest (1)" />
         <item itemvalue="JUnit.TaskTest" />
-        <item itemvalue="JUnit.EditTodoListTest.testRemoveTask" />
-        <item itemvalue="JUnit.EditTodoListTest" />
       </list>
     </recent_temporary>
   </component>
@@ -370,16 +363,17 @@
       <option name="project" value="LOCAL" />
       <updated>1552586170245</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary=" fixed errors and improved the comments">
+      <created>1552587932764</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1552587932764</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EditTodoListTest_testMarkAsDone - 2019.03.12 at 11h 27m 01s.xml">
-      <configuration name="EditTodoListTest.testMarkAsDone" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EditTodoListTest_testMarkAsDone - 2019.03.12 at 11h 30m 22s.xml">
-      <configuration name="EditTodoListTest.testMarkAsDone" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="EditTodoListTest_testMarkAsDone - 2019.03.12 at 11h 30m 58s.xml">
       <configuration name="EditTodoListTest.testMarkAsDone" configurationId="JUnit" />
     </history-entry>
@@ -403,6 +397,12 @@
     </history-entry>
     <history-entry file="EditTodoListTest_(1) - 2019.03.14 at 12h 01m 37s.xml">
       <configuration name="EditTodoListTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EditTodoListTest_testRemoveTask_(1) - 2019.03.14 at 20h 00m 58s.xml">
+      <configuration name="EditTodoListTest.testRemoveTask (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EditTodoListTest_testEditTask - 2019.03.14 at 20h 01m 03s.xml">
+      <configuration name="EditTodoListTest.testEditTask" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -428,15 +428,15 @@
       <window_info id="simpleUML" order="7" weight="0.5829726" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.40992907" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.04680851" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.49078014" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.04255319" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.04255319" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.2397163" />
       <window_info anchor="bottom" id="Dependency Viewer" order="11" weight="0.06666667" />
       <window_info anchor="right" id="PlantUML" weight="0.32972583" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -491,7 +491,8 @@
     <MESSAGE value="Fixed some errors" />
     <MESSAGE value="Clean up" />
     <MESSAGE value="fixed errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed errors" />
+    <MESSAGE value=" fixed errors and improved the comments" />
+    <option name="LAST_COMMIT_MESSAGE" value=" fixed errors and improved the comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -501,6 +502,12 @@
           <line>22</line>
           <properties />
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Menu.java</url>
+          <line>72</line>
+          <properties />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/TaskTest.java</url>
@@ -549,6 +556,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/TaskTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Task.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -559,10 +587,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DisplayTodoList.java">
+    <entry file="file://$PROJECT_DIR$/src/EditTodoListTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-831">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        <state relative-caret-position="88">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ReadAndWrite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -587,43 +625,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Menu.java">
+    <entry file="file://$PROJECT_DIR$/src/DisplayTodoList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1076">
-          <caret line="110" column="70" lean-forward="true" selection-start-line="110" selection-start-column="70" selection-end-line="110" selection-end-column="70" />
+        <state relative-caret-position="423">
+          <caret line="85" column="126" lean-forward="true" selection-start-line="85" selection-start-column="126" selection-end-line="85" selection-end-column="126" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReadAndWrite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-193">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TaskTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EditTodoListTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-112">
-          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>

@@ -166,7 +166,7 @@ public class Menu {
                     rw.writeToDoList(modified);
                     break;
                 }
-                System.out.println("Enter a valid option please ");
+                System.out.println("Enter a valid option please: ");
             }
             catch(IndexOutOfBoundsException|InputMismatchException|NumberFormatException ex){
                 System.out.println("That task doesn't exist enter again: ");

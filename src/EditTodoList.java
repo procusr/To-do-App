@@ -22,7 +22,7 @@ public class EditTodoList {
         readAndWriteToFile.writeToDoList(tasks);
     }
 
-    public List<Task> removeTask(int id,List<Task> tasks){    //to store edited list
+    public List<Task> removeTask(int id,List<Task> tasks){
         tasks = readAndWriteToFile.readTaskAsAList();
         tasks.remove(id);
         return tasks;

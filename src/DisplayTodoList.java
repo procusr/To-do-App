@@ -19,6 +19,7 @@ public class DisplayTodoList {
         rw = new ReadAndWrite();
     }
 
+    //A method to Display main menu
     public void displayMainMenu(){
         System.out.println("------------------------------------------------");
         displayDoneAndUndone(rw.readTaskAsAList());
@@ -31,6 +32,7 @@ public class DisplayTodoList {
         System.out.println("------------------------------------------------");
     }
 
+    //Counts the number of tasks done and incomplete
     public void displayDoneAndUndone(List<Task> tasks){
         int done_tasks=0,undone_taks=0;
         for(Task task:tasks){
@@ -44,6 +46,7 @@ public class DisplayTodoList {
         System.out.println("You have " + done_tasks + "  task(s) Completed  and  " + undone_taks + "  Task(s) to do");
     }
 
+    //Reads from a file and and display its contents as a list
     public void readFileAndDisplayList() {
         List<Task> loadedFromFile = new ArrayList<>();
         try (FileInputStream fis = new FileInputStream("t.ser")) {
@@ -60,8 +63,9 @@ public class DisplayTodoList {
         displayTasks(loadedFromFile);
     }
 
+    //
     public void displayTasks(List<Task> task) {
-        System.out.format("%80s%n", "Your Current Tasks are:-");
+        System.out.format("%80s%n", "Your Current Task(s) are:-");
         String format = "%-4s%-15s%-90s%-35s%-10s%n";
         System.out.printf(format, "ID", "Due Date", "Task", "Project", "Status");
         System.out.printf(format, "━━", "━━━━━━━━━━━━", "━━━━━━━━━", "━━━━━━━━━", "━━━━━━━━");
@@ -72,18 +76,19 @@ public class DisplayTodoList {
         }
     }
 
+    //Sorts the projects alphabetically
     public void sortByProject(List<Task> tasks){
         List<Task> sorted = tasks.stream().sorted(Comparator.comparing(task->task.getProject())).collect(Collectors.toList());
         displayTasks(sorted);
     }
-
+    //Sort the days in ascending order
     public void displayByDate(List<Task> tasks){
         List<Task> sorted = tasks.stream().sorted(Comparator.comparing(task->task.getDueDate())).collect(Collectors.toList());
         displayTasks(sorted);
     }
-
+        //Display only incomplete tasks
     public void ShowNotDone(List<Task> tasks){
-        List<Task> notDone = tasks.stream().filter(task -> task.getStatus()==false).collect(Collectors.toList());
+        List<Task> notDone = tasks.stream().filter(task -> !task.getStatus()).collect(Collectors.toList());
         displayTasks(notDone);
     }
 }

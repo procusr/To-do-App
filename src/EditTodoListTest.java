@@ -35,6 +35,8 @@ public class EditTodoListTest {
         assertEquals(expectedResult.get(0).getTask(), result.get(0).getTask());
     }
 
+
+    // this test to work there must be a file stored with the specified tasks.
     @Test
     public void testEditTask() {
         // Setup

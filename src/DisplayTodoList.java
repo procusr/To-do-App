@@ -24,11 +24,11 @@ public class DisplayTodoList {
         System.out.println("------------------------------------------------");
         displayDoneAndUndone(rw.readTaskAsAList());
         System.out.println("------------------------------------------------");
-        System.out.println("(1).Add to do list \t\t(2).View Your Tasks");
-        System.out.println("(3).Remove a Task \t\t(4).Edit Task");
-        System.out.println("(5).Sort by Date\t    (6).Sort Tasks by project");
-        System.out.println("(7).Mark Task as done\t(8).Show only Undone tasks");
-        System.out.println("(9).Quit");
+        System.out.println("(0).Add to do list         \t(1).View Your Tasks");
+        System.out.println("(2).Remove a Task          \t(3).Edit Task");
+        System.out.println("(4).Sort by Date           \t(5).Sort Tasks by project");
+        System.out.println("(6).Mark Task as done      \t(7).Show only Undone tasks");
+        System.out.println("(8).Show project with tasks (9).Quit");
         System.out.println("------------------------------------------------");
     }
 
@@ -90,6 +90,12 @@ public class DisplayTodoList {
     public void ShowNotDone(List<Task> tasks){
         List<Task> notDone = tasks.stream().filter(task -> !task.getStatus()).collect(Collectors.toList());
         displayTasks(notDone);
+    }
+
+    //Display tasks with with given project
+    public void showProjectByName(List<Task> tasks,String project) {
+        tasks = tasks.stream().filter(task -> task.getProject().equals(project)).collect(Collectors.toList());
+        displayTasks(tasks);
     }
 }
 
